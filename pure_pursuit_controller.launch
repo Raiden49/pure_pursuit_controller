@@ -1,0 +1,12 @@
+<launch>
+
+    <node name="pure_pursuit_controller_node" pkg="pure_pursuit_controller" type="pure_pursuit_controller_node" output="screen">
+
+        <remap from="pure_pursuit_controller_node/cmd_vel" to="cmd_vel"/>
+        <remap from="pure_pursuit_controller_node/odom" to="odom"/>
+        <remap from="pure_pursuit_controller_node/visualization_marker" to="visualization_marker"/>
+
+    </node>
+
+
+</launch>
