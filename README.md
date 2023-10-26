@@ -1,7 +1,7 @@
 # pure_pursuit_controller
-​	该项目是Pure_pursuit路径跟踪的仿真实现，基于开源的Turtlebot3模型
+​	该项目是Pure_pursuit路径跟踪的仿真实现，基于开源的Turtlebot3模型，效果如下图所示
 
-![2](docs\2.gif)
+![2](docs/2.gif)
 
 ## 如何运行
 
