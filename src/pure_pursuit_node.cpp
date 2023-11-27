@@ -114,13 +114,14 @@ void PurePursuitNode::PurePursuitRun() {
         // ROS_INFO_STREAM("ahead_path_point:" << ahead_path_point.first.first 
         //         << " " << ahead_path_point.first.second);
 
-        // delta = atan2(2Lsin(alpha) / ld)(L = 1)
+        // delta = atan2(2Lsin(alpha) / ld)(L = 0.5)
         double alpha = std::atan2
                 (ahead_path_point.first.second - current_pose.first.second, 
                 ahead_path_point.first.first - current_pose.first.first) - 
                 current_pose.second;
         // ROS_INFO_STREAM("alpha:" << alpha);
-        double delta = std::atan2(2 * 0.5 * sin(alpha), ld_new);        
+        double L = 0.5;
+        double delta = std::atan2(2 * L * sin(alpha), ld_new);        
         // ROS_INFO_STREAM("delta:" << delta);
 
         twist_msg.linear.x = speed;
