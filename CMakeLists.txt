@@ -15,6 +15,11 @@ find_package(catkin REQUIRED COMPONENTS
     tf
 )
 
+catkin_package(
+  CATKIN_DEPENDS
+  roscpp
+)
+
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/include
     ${catkin_INCLUDE_DIRS}
@@ -33,3 +38,4 @@ target_link_libraries(${PROJECT_NAME}_node
     ${PROJECT_NAME}
     ${catkin_LIBRARIES}
 )
+
